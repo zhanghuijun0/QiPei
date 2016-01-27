@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C4C4C4"
+    android:orientation="vertical"
+    android:paddingBottom="5dp" >
+
+    <ImageButton
+        android:id="@+id/ibtn_search_speech"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/search_speech_bg_selector"
+        android:padding="5dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_keyword_history_speech" />
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/prlv_search_keyword_history"
+        style="@style/Widget.PullToRefreshListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/ibtn_search_speech"
+        android:layout_alignParentTop="true"
+        android:background="#FFFFFFFF"
+        android:cacheColorHint="#00000000"
+        android:divider="#FFDDDDDD"
+        android:footerDividersEnabled="true"
+        android:headerDividersEnabled="false" />
+
+</RelativeLayout>

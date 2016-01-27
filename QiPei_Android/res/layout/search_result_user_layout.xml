@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/ll_search_result_orderby_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/common_segement_bg"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <RadioGroup
+            android:id="@+id/rg_search_result_user_orderby"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/common_corner_bg"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="2.0" >
+
+            <RadioButton
+                android:id="@+id/rbtn_search_user_hot"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1.0"
+                android:background="@drawable/common_corner_left_bg_selector"
+                android:button="@null"
+                android:gravity="center"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:text="@string/search_label_user_hot"
+                android:textColor="@drawable/common_corner_tc_selector" />
+
+            <RadioButton
+                android:id="@+id/rbtn_search_user_nearby"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0"
+                android:background="@drawable/common_corner_right_bg_selector"
+                android:button="@null"
+                android:gravity="center"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:text="@string/search_label_user_nearby"
+                android:textColor="@drawable/common_corner_tc_selector" />
+        </RadioGroup>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#CECECE" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_search_user_view_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ll_search_result_orderby_container" >
+    </FrameLayout>
+
+    <com.capricorn.VaryArcMenu
+        xmlns:arc="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/vary_arc_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        arc:hintview="@drawable/ic_search_user_zhongduan" />
+</merge>

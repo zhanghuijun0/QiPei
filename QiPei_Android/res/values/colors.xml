@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="common_transparent">#00000000</color>
+    <color name="common_banner_textview_bg">#a8000000</color>
+    <color name="common_segement_bg">#F5F5F5</color>
+    <color name="common_listitem_pressed">#FFC9C9C9</color>
+    <color name="common_listitem_normal">#00000000</color>
+    <color name="common_bottombar_bg">#888888</color>
+    <color name="common_banner_bg">#FFF5F5F5</color>
+    <color name="common_banner_title_text_color">#FFFFFFFF</color>
+    <color name="common_actionbar_bg">#0077C9</color>
+    <color name="common_tabbar_bg">#3D3D3D</color>
+	<color name="common_tab_selected_bg">#2D2D2D</color>
+	<color name="common_activity_bg">#FFFFFFFF</color>
+	<color name ="common_main_textcolor">#FF0077C9</color>
+	<color name ="common_scrollbar_thumb_color">#FFB2B2B2</color>
+	<color name="common_profile_login_button">#0077C9</color>
+	<color name="common_profile_login_button_pressed">#74B3FF</color>
+	<color name="profile_user_info_background">#F5F5F5</color>
+	<color name="profile_user_info_select_background">#C9C9C9</color>
+	<color name="profile_vip_text_red_color">#D0093F</color>
+	<color name="profile_certificated_text_green_color">#089A4A</color>
+	<color name="profile_save_button_text_green_color">#43B051</color>
+	<color name="profile_save_button_text_tint_green_color">#DCE8AA</color>
+	<color name="profile_button_enable_color">#DFDAE4</color>
+	<color name="profile_edittext_border_color">#C9C9C9</color>
+	<color name="common_deep_gray_color">#282C2D</color>
+	<color name="common_gray_color">#303537</color>
+	<color name ="area_listitem_pressed_color">#FFC9C9C9</color>
+	<color name ="common_back_selector_color">#125997</color>
+	<color name ="common_btn_gray_pressed_color">#FFC9C9C9</color>
+	<color name ="common_photo_border_color">#C9C9C9</color>
+	<color name ="common_gray_line_color">#D5D5D5</color>
+	<color name ="profile_my_release_text_color">#ADADAD</color>
+	<color name ="profile_save_button_press_color">#0E6305</color>
+	<color name ="profile_black_text_color">#000000</color>
+	<color name ="profile_gray_text_color">#7C7E7D</color>
+	
+	
+	<color name ="news_listitem_title">#FF2D2D2D</color>
+	<color name ="news_listitem_date">#FFBCBCBC</color>
+	<color name ="news_listitem_biref">#999999</color>
+	<color name ="news_listitem_line_view_background">#E1E1E1</color>
+</resources>

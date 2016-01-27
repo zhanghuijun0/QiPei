@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:vpi="http://schemas.android.com/apk/lib/cn.amose.vpi"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_banner_height"
+        android:background="@color/common_banner_bg"
+        android:minHeight="@dimen/common_banner_height" >
+
+        <com.gammainfo.qipei.widget.UninterceptableViewPager
+            android:id="@+id/vp_search_pager"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/common_banner_height"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true" />
+
+        <cn.amose.vpi.CirclePageIndicator
+            android:id="@+id/cpi_search_pager_indcator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="bottom|right"
+            android:padding="10dip"
+            vpi:centered="false"
+            vpi:fillColor="#d3b28a"
+            vpi:pageColor="#745a46"
+            vpi:radius="3dp"
+            vpi:strokeColor="#00000000"
+            vpi:strokeWidth="1dp" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        android:text="@string/search_label_nearby"
+        android:textColor="#ff000000"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffffff"
+        android:weightSum="3" >
+
+        <LinearLayout
+            android:id="@+id/ll_search_manufacturer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@drawable/search_nearby_item_bg_selector"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:clickable="false"
+                android:drawableLeft="@drawable/ic_search_manufacturer"
+                android:drawablePadding="5dp"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="@string/search_label_manufacturer" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#C9C9C9" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_search_agency"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1.0"
+            android:background="@drawable/search_nearby_item_bg_selector"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:clickable="false"
+                android:drawableLeft="@drawable/ic_search_agency"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="@string/search_label_agency" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#C9C9C9" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_search_enduser"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@drawable/search_nearby_item_bg_selector"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:clickable="false"
+                android:drawableLeft="@drawable/ic_search_enduser"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="@string/search_label_enduser" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#C9C9C9" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:text="@string/search_label_hotuser"
+        android:textColor="#ff000000"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+</LinearLayout>

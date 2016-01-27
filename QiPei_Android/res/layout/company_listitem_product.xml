@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:paddingBottom="5dp"
+    android:paddingTop="5dp"
+    
+    android:layout_height="match_parent" >
+
+    <com.loopj.android.image.SmartImageView
+        android:id="@+id/companyinfo_product_listitem_image"
+        android:layout_width="120dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="7dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:background="#ffeeeeee"
+        android:scaleType="fitXY" 
+        />
+
+    <TextView
+        android:id="@+id/companyinfo_product_listitem_intro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+		android:layout_marginRight="7dp"
+        android:layout_below="@+id/companyinfo_product_listitem_name"
+        android:layout_toRightOf="@+id/companyinfo_product_listitem_image"
+        android:layout_marginTop="28dp"
+        android:maxLines="2"
+        android:paddingLeft="5dp"
+        android:textColor="#FFBCBCBC" />
+
+    <TextView
+        android:id="@+id/companyinfo_product_listitem_brand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/companyinfo_product_listitem_name"
+        android:layout_toRightOf="@+id/companyinfo_product_listitem_image"
+        android:singleLine="true"
+        android:paddingLeft="5dp"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/companyinfo_product_listitem_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/companyinfo_product_listitem_image"
+        android:maxLength="10"
+        android:singleLine="true"
+        android:paddingLeft="5dp"
+        android:textColor="#FF2D2D2D"
+        android:textSize="20sp" />
+
+</RelativeLayout>

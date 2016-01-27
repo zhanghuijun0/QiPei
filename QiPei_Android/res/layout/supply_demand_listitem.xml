@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical"
+    android:paddingTop="10dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp" > 
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1dp"
+            android:orientation="vertical"
+            android:background="@drawable/list_phone_item_bg_selector"
+            android:padding="5dp" >
+			  <TextView
+                android:id="@+id/supply_demand_listitem_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLength="10"
+                android:singleLine="true"
+                android:textColor="#FF2D2D2D"
+                android:textSize="17sp" />
+            <TextView
+                android:id="@+id/supply_demand_listitem_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="2"
+                android:textColor="#FFBCBCBC" />
+            
+            <TextView
+                android:id="@+id/supply_demand_listitem_company_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textColor="#FF0B9E4C"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2" >
+                 <LinearLayout
+                android:id="@+id/supply_demand_list_listitem_button_phone"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1.0"
+                android:background="@drawable/list_phone_item_bg_selector"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="6dp" >
+
+                <Button
+                    android:id="@+id/supply_demand_listitem_callphone_bt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#00000000"
+                    android:clickable="false"
+                    android:drawableLeft="@drawable/list_item_bt_left_phone"
+                    android:drawablePadding="5dp"
+                    android:text="@string/list_listuser_bt_phone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/supply_demand_list_listitem_favorite"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1.0"
+                android:background="@drawable/list_phone_item_bg_selector"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="6dp" >
+
+                <Button
+                    android:id="@+id/supply_demand_list_listitem_favorite_bt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#00000000"
+                    android:clickable="false"
+                    android:drawableLeft="@drawable/list_item_bt_left_favorite_false"
+                    android:drawablePadding="5dp"
+                    android:text="@string/list_listuser_bt_favorite" />
+            </LinearLayout>
+        </LinearLayout>
+      <View 
+	    android:layout_height="1dp" 
+	    android:background="#D5D5D5" 
+	    android:layout_width="wrap_content"
+	    >
+	</View>
+    </LinearLayout>

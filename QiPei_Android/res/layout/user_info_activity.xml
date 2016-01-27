@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_actionbar_height"
+        android:background="@color/common_actionbar_bg" >
+        <TextView
+            style="@style/Widget.ActionbarTextView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/profile_label_my_info_text" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/companyinfo_lable_back_selector"
+            android:onClick="onBackClick"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:src="@drawable/ic_back" />
+    </FrameLayout>
+    <ScrollView
+        style="@style/Widget.GammaScrollbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/common_activity_bg" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/profile_gray_line_size"
+                android:layout_marginTop="20dp"
+                android:background="@color/common_gray_line_color" />
+            <!-- 第一行 头像 -->
+            <RelativeLayout
+                android:id="@+id/profile_upload_image_layout"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@drawable/profile_my_relative_layout_selecter"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:padding="15dp" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/profile_label_photo_text"
+                    android:textSize="@dimen/profile_first_title_font_size" />
+                <ImageView
+                    android:id="@+id/small_arrows1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/profile_login_small_arrows" />
+                <com.loopj.android.image.SmartImageView
+                    android:id="@+id/photo_image"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:scaleType="fitXY"
+                    android:padding="1dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@id/small_arrows1"
+                    android:background="@color/common_photo_border_color"/>
+            </RelativeLayout>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/profile_user_info_background" >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/profile_gray_line_size"
+                    android:layout_marginLeft="15dp"
+                    android:background="@color/common_gray_line_color" />
+            </FrameLayout>
+            <!-- 第二行 公司名称 -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/profile_my_relative_layout_selecter"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:onClick="onChangeCompanyNameRelativeLaoutClick"
+                android:padding="15dp" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/profile_label_company_name_text"
+                    android:textSize="@dimen/profile_first_title_font_size" />
+                <ImageView
+                    android:id="@+id/small_arrows2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/profile_login_small_arrows" />
+                <TextView
+                    android:id="@+id/company_name_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/small_arrows2"
+                    android:ellipsize="end"
+                    android:maxEms="10"
+                    android:paddingRight="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/profile_gray_text_color"
+                    android:textSize="@dimen/profile_second_title_font_size" />
+            </RelativeLayout>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/profile_user_info_background" >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/profile_gray_line_size"
+                    android:layout_marginLeft="15dp"
+                    android:background="@color/common_gray_line_color" />
+            </FrameLayout>
+            <!-- 第三行 地址 -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/profile_my_relative_layout_selecter"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:onClick="onChangeAddressRelativeLaoutClick"
+                android:padding="15dp" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/profile_label_address_text"
+                    android:textSize="@dimen/profile_first_title_font_size" />
+                <ImageView
+                    android:id="@+id/small_arrows3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/profile_login_small_arrows" />
+                <TextView
+                    android:id="@+id/address_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/small_arrows3"
+                    android:ellipsize="start"
+                    android:maxEms="10"
+                    android:paddingRight="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/profile_gray_text_color"
+                    android:textSize="@dimen/profile_second_title_font_size" />
+            </RelativeLayout>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/profile_user_info_background" >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/profile_gray_line_size"
+                    android:layout_marginLeft="15dp"
+                    android:background="@color/common_gray_line_color" />
+            </FrameLayout>
+            <!-- 第四行 电话 -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/profile_my_relative_layout_selecter"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:onClick="onChangePhoneRelativeLaoutClick"
+                android:padding="15dp" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/profile_label_phone_text"
+                    android:textSize="@dimen/profile_first_title_font_size" />
+                <ImageView
+                    android:id="@+id/small_arrows4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/profile_login_small_arrows" />
+                <TextView
+                    android:id="@+id/phone_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/small_arrows4"
+                    android:ellipsize="end"
+                    android:maxEms="10"
+                    android:paddingRight="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/profile_gray_text_color"
+                    android:textSize="@dimen/profile_second_title_font_size" />
+            </RelativeLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/profile_gray_line_size"
+                android:background="@color/common_gray_line_color" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/profile_gray_line_size"
+                android:layout_marginTop="40dp"
+                android:background="@color/common_gray_line_color" />
+            <!-- 第五行 公司简介 -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/profile_my_relative_layout_selecter"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:onClick="onChangeCompanyIntroRelativeLaoutClick"
+                android:padding="15dp" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/profile_label_company_intro_text"
+                    android:textSize="@dimen/profile_first_title_font_size" />
+                <ImageView
+                    android:id="@+id/small_arrows5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/profile_login_small_arrows" />
+                <TextView
+                    android:id="@+id/company_intro_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/small_arrows5"
+                    android:ellipsize="end"
+                    android:maxEms="10"
+                    android:paddingRight="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/profile_gray_text_color"
+                    android:textSize="@dimen/profile_second_title_font_size" />
+            </RelativeLayout>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/profile_user_info_background" >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/profile_gray_line_size"
+                    android:layout_marginLeft="15dp"
+                    android:background="@color/common_gray_line_color" />
+            </FrameLayout>
+            <!-- 第九行 修改密码 -->
+            
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/profile_my_relative_layout_selecter"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:onClick="onRevisePasswordRelativeLaoutClick"
+                android:padding="15dp" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/profile_label_revise_sure_text"
+                    android:textSize="@dimen/profile_first_title_font_size" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/profile_login_small_arrows" />
+            </RelativeLayout>
+            <!-- 第六行 产品管理 -->
+            <!-- <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/profile_my_relative_layout_selecter"
+                android:clickable="true"
+                
+                android:gravity="center_vertical"
+                android:onClick="onChangeProductNumoRelativeLaoutClick"
+                android:padding="15dp" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/profile_label_product_num_text"
+                    android:textSize="@dimen/profile_first_title_font_size" />
+                <ImageView
+                    android:id="@+id/small_arrows6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/profile_login_small_arrows" />
+                <TextView
+                    android:id="@+id/profile_product_num_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/small_arrows6"
+                    android:paddingRight="10dp"
+                    android:textColor="@color/profile_gray_text_color"
+                    android:textSize="@dimen/profile_second_title_font_size" />
+            </RelativeLayout> -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/profile_gray_line_size"
+                android:background="@color/common_gray_line_color" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/profile_gray_line_size"
+                android:layout_marginTop="40dp"
+                android:background="@color/common_gray_line_color" />
+            <!-- 第七行 账户类型 -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/profile_my_relative_layout_selecter"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:onClick="onChangeUserTypeRelativeLaoutClick"
+                android:padding="15dp" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/profile_label_user_type_text"
+                    android:textSize="@dimen/profile_first_title_font_size" />
+                <ImageView
+                    android:id="@+id/small_arrows7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/profile_login_small_arrows" />
+                <TextView
+                    android:id="@+id/user_type_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/small_arrows7"
+                    android:paddingRight="10dp"
+                    android:textColor="@color/profile_gray_text_color"
+                    android:textSize="@dimen/profile_second_title_font_size" />
+            </RelativeLayout>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/profile_user_info_background" >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/profile_gray_line_size"
+                    android:layout_marginLeft="15dp"
+                    android:background="@color/common_gray_line_color" />
+            </FrameLayout>
+            <!-- 第八行 会员等级 -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/profile_my_relative_layout_selecter"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:onClick="onChangeGradeRelativeLaoutClick"
+                android:padding="15dp" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/profile_label_grade_text"
+                    android:textSize="@dimen/profile_first_title_font_size" />
+                <ImageView
+                    android:id="@+id/small_arrows8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/profile_login_small_arrows" />
+                <TextView
+                    android:id="@+id/grade_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/small_arrows8"
+                    android:paddingRight="10dp"
+                    android:textColor="@color/profile_gray_text_color"
+                    android:textSize="@dimen/profile_second_title_font_size" />
+            </RelativeLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/profile_gray_line_size"
+                android:background="@color/common_gray_line_color" />
+            
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/profile_gray_line_size"
+                android:layout_marginBottom="40dp"
+                android:background="@color/common_gray_line_color" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_focused="true">
+        <shape>
+            <corners android:radius="5dp" />
+            <solid android:color="@color/common_back_selector_color" />
+            <padding android:bottom="3dp" android:left="3dp" android:right="3dp" android:top="3dp"></padding>
+        </shape>
+    </item>
+    <item android:state_pressed="true"><shape>
+            <corners android:radius="5dp" />
+            <solid android:color="@color/common_back_selector_color" />
+            <padding android:bottom="3dp" android:left="3dp" android:right="3dp" android:top="3dp"></padding>
+        </shape>
+    </item>
+    <item android:state_enabled="false"><shape>
+            <corners android:radius="5dp" />
+            <solid android:color="@color/profile_user_info_select_background" />
+            <padding android:bottom="3dp" android:left="3dp" android:right="3dp" android:top="3dp"></padding>
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <corners android:radius="5dp" />
+            <solid android:color="@color/common_profile_login_button" />
+            <padding android:bottom="3dp" android:left="3dp" android:right="3dp" android:top="3dp"></padding>
+        </shape>
+    </item>
+</selector>

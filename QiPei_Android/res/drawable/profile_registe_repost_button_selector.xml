@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_focused="true">
+        <shape>
+            <corners android:radius="360dip" />
+            <solid android:color="@color/common_profile_login_button" />
+            <padding android:bottom="3dp" android:left="3dp" android:right="3dp" android:top="3dp"></padding>
+        </shape>
+    </item>
+    <item android:state_pressed="true"><shape>
+            <corners android:radius="360dip" />
+            <solid android:color="@color/common_profile_login_button_pressed" />
+            <padding android:bottom="3dp" android:left="3dp" android:right="3dp" android:top="3dp"></padding>
+        </shape>
+    </item>
+    <item android:state_enabled="false">
+        <shape>
+            <corners android:radius="360dip" />
+            <solid android:color="@color/profile_button_enable_color" />
+            
+        </shape>
+    </item>
+    <item android:state_enabled="true">
+        <shape>
+            <corners android:radius="360dip" />
+            <solid android:color="@color/common_profile_login_button" />
+            
+        </shape>
+    </item>
+</selector>

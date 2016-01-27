@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:vpi="http://schemas.android.com/apk/lib/cn.amose.vpi"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:background="#88000000"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_picture_preview_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <cn.amose.vpi.CirclePageIndicator
+        android:id="@+id/cpi_picture_preview_pager_indcator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="3dp"
+        android:padding="10dip"
+        vpi:centered="false"
+        vpi:fillColor="#d3b28a"
+        vpi:pageColor="#745a46"
+        vpi:radius="3dp"
+        vpi:strokeColor="#00000000"
+        vpi:strokeWidth="1dp" />
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/common_actionbar_height">
+
+        <ImageView
+            android:id="@+id/iv_picture_preview_back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:gravity="center"
+            android:paddingLeft="@dimen/product_publish_spacing"
+            android:paddingRight="@dimen/product_publish_spacing"
+            android:src="@drawable/ic_back" />
+    </FrameLayout>
+
+</FrameLayout>

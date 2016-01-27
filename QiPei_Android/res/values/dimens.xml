@@ -1,0 +1,27 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="common_actionbar_height">48dp</dimen>
+    <dimen name="common_banner_height">180dp</dimen>
+    <dimen name="common_bottombar_height">42dp</dimen>
+    
+    <dimen name="news_listitem_padding">8dp</dimen>
+    <dimen name="news_listitem_smart_image_view_width">100dp</dimen>
+    <dimen name="news_listitem_smart_image_view_height">80dp</dimen>
+    <dimen name="news_listitem_right_padding_left">8dp</dimen>
+    <dimen name="news_listitem_title_text_size">17sp</dimen>
+    <dimen name="news_listitem_brief_margin_top">3dp</dimen>
+    <dimen name="news_listitem_line_view_height">1dp</dimen>
+    <dimen name="news_listitem_line_view_margin_left">8dp</dimen>
+    <dimen name="news_listitem_line_view_margin_right">8dp</dimen>
+    
+    <dimen name="profile_first_title_font_size">18sp</dimen>
+    <dimen name="profile_second_title_font_size">14sp</dimen>
+    <dimen name="profile_gray_line_size">1px</dimen>
+    <dimen name="product_publish_picture_width">80dp</dimen>
+    <dimen name="product_publish_picture_height">60dp</dimen>
+    <dimen name="product_publish_spacing">15dp</dimen>
+
+</resources>

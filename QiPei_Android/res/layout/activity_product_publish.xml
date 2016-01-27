@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e4e4e4"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_actionbar_height"
+        android:background="@color/common_actionbar_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/companyinfo_lable_back_selector"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="onBackClick"
+            android:paddingLeft="@dimen/product_publish_spacing"
+            android:paddingRight="@dimen/product_publish_spacing"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/tv_product_publish_activity_title"
+            style="@style/Widget.ActionbarTextView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="添加产品" />
+    </FrameLayout>
+
+    <ScrollView
+        style="@style/Widget.GammaScrollbar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.0" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/profile_round_edittext" >
+
+                <EditText
+                    android:id="@+id/et_product_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="#00000000"
+                    android:clickable="false"
+                    android:paddingBottom="3dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="3dp"
+                    android:singleLine="true" />
+
+                <TextView
+                    android:id="@+id/tv_product_title_tips"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:drawableLeft="@drawable/profile_release_title_image"
+                    android:drawablePadding="5dp"
+                    android:gravity="center"
+                    android:text="@string/profile_label_input_title_text"
+                    android:textColor="@color/profile_my_release_text_color" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/profile_round_edittext"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/product_publish_spacing" >
+
+                <HorizontalScrollView
+                    style="@style/Widget.GammaScrollbar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/product_publish_spacing"
+                    android:layout_weight="1.0" >
+
+                    <LinearLayout
+                        android:id="@+id/ll_product_picture_container"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <ImageView
+                    android:id="@+id/iv_product_add_picture"
+                    android:layout_width="@dimen/product_publish_picture_width"
+                    android:layout_height="@dimen/product_publish_picture_height"
+                    android:clickable="true"
+                    android:onClick="onAddPictureClick"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_product_add_normal" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1.0"
+                android:background="@drawable/profile_round_edittext" >
+
+                <EditText
+                    android:id="@+id/et_product_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="#00000000"
+                    android:clickable="false"
+                    android:gravity="left|top"
+                    android:minLines="8"
+                    android:paddingBottom="3dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="3dp" />
+
+                <TextView
+                    android:id="@+id/tv_product_content_tips"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/profile_label_input_detail_content_text"
+                    android:textColor="@color/profile_my_release_text_color" />
+            </FrameLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/profile_login_button_selecter"
+                android:onClick="onPublishClick"
+                android:padding="10dp"
+                android:text="@string/profile_label_sure_release_text"
+                android:textColor="@color/common_activity_bg"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:vpi="http://schemas.android.com/apk/lib/cn.amose.vpi"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:background="@color/common_banner_bg"
+        android:minHeight="@dimen/common_banner_height" >
+
+        <com.gammainfo.qipei.widget.UninterceptableViewPager
+            android:id="@+id/vp_search_pager"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true" />
+
+        <cn.amose.vpi.CirclePageIndicator
+            android:id="@+id/cpi_search_pager_indcator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:padding="10dip"
+            vpi:centered="false"
+            vpi:fillColor="#d3b28a"
+            vpi:pageColor="#745a46"
+            vpi:radius="3dp"
+            vpi:strokeColor="#00000000"
+            vpi:strokeWidth="1dp" />
+
+    </RelativeLayout>
+    
+      <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/list_listuser_lable_product_intro"
+        android:textColor="#ff000000"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+      
+	<View 
+	    android:layout_height="1dp" 
+	    android:background="#FFF5F5F5" 
+	    android:layout_marginBottom="10dp"
+	    android:layout_width="wrap_content" />
+
+	<LinearLayout
+	    android:id="@+id/product_property_list"
+	    android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:orientation="vertical"
+	   />
+
+	<WebView
+	    android:id="@+id/product_intro"
+	    android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textColor="#FFBCBCBC" 
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+	    />
+	
+</LinearLayout>

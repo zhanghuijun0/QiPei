@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="200dp"
+    android:layout_gravity="center"
+    android:background="@drawable/voice_recognition_dialog_bg"
+    android:orientation="vertical" >
+
+    <ImageButton
+        android:id="@+id/ibtn_voice_recognition_dialog_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="right|top"
+        android:background="#00000000"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_voice_recognition_dialog_close" />
+
+    <RelativeLayout
+        android:id="@+id/rl_voice_recognition_voice_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="20dp"
+        android:visibility="visible" >
+
+        <TextView
+            android:id="@+id/tv_voice_recognition_dialog_tips"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="@string/voice_recognition_label_please_speak"
+            android:textColor="#6A6A6A"
+            android:textSize="22sp" />
+
+        <Button
+            android:id="@+id/btn_voice_recognitin_dialog_finish"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/voice_recognition_btn_selector"
+            android:padding="10dp"
+            android:text="@string/voice_recognition_label_speak_finish"
+            android:textColor="#ffffff" />
+
+        <ImageView
+            android:id="@+id/iv_voice_recognition_speaker"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/btn_voice_recognitin_dialog_finish"
+            android:layout_below="@id/tv_voice_recognition_dialog_tips"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:scaleType="fitCenter" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_voice_recognition_retry_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="20dp" >
+
+        <LinearLayout
+            android:id="@+id/ll_voice_recognition_retry_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btn_voice_recognitin_dialog_cancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:background="@drawable/voice_recognition_btn_left_selector"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/voice_recognition_label_cancel"
+                android:textColor="#6A6A6A" />
+
+            <Button
+                android:id="@+id/btn_voice_recognitin_dialog_retry"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:background="@drawable/voice_recognition_btn_right_selector"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/voice_recognition_label_retry"
+                android:textColor="#ffffff" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/ll_voice_recognition_retry_container"
+            android:layout_alignParentTop="true"
+            android:gravity="center_horizontal"
+            android:paddingTop="40dp"
+            android:text="@string/voice_recognition_label_retry_tips"
+            android:textColor="#6A6A6A"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

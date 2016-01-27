@@ -1,0 +1,93 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_activity_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_actionbar_height"
+        android:background="@color/common_actionbar_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageView
+            style="@style/Widget.BackView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:onClick="onBackClick" />
+
+        <TextView
+            style="@style/Widget.ActionbarTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="@string/activity_title_city_choose" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_province_locationcontainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp" >
+
+        <TextView
+            android:id="@+id/tv_province_current_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:drawableLeft="@drawable/ic_city_choose_location"
+            android:drawablePadding="5dp"
+            android:text="@string/province_label_gps_location"
+            android:textColor="#FF000000" />
+
+        <Button
+            android:id="@+id/btn_province_choose_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:background="@drawable/common_btn_back_selector"
+            android:padding="10dp"
+            android:text="北京"
+            android:textColor="#FFFFFFFF" />
+
+        <Button
+            android:id="@+id/btn_province_gps_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:background="@drawable/common_btn_back_selector"
+            android:paddingBottom="10dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="10dp"
+            android:text="重新定位"
+            android:textColor="#FFFFFFFF"
+            android:visibility="invisible" />
+
+        <ProgressBar
+            android:id="@+id/pb_province_location"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginRight="20dp"
+            android:indeterminate="true"
+            android:visibility="invisible" />
+    </FrameLayout>
+
+    <ListView
+        android:id="@+id/lv_province"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:cacheColorHint="#00000000"
+        android:divider="@color/area_listitem_pressed_color"
+        android:dividerHeight="1px"
+        android:listSelector="@drawable/area_listitem_selector"
+        android:scrollbars="none" >
+    </ListView>
+
+</LinearLayout>

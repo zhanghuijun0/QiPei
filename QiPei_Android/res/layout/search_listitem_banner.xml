@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <com.loopj.android.image.SmartImageView
+        android:id="@+id/siv_search_banner_image"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/tv_search_banner_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|left"
+        android:gravity="left|center_vertical"
+        android:paddingBottom="5dp"
+        android:paddingLeft="8dp"
+        android:textColor="#FFFFFFFF"
+        android:background="#a8000000"
+        android:paddingTop="5dp"
+        android:singleLine="true" />
+
+</FrameLayout>

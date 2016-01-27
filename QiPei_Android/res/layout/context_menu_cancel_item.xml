@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/common_btn_black_corner_selector"
+    android:padding="10dp"
+    android:text="@string/common_label_cancel"
+    android:textColor="#F5F5F5"
+    android:textSize="20sp" />

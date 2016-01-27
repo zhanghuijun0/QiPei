@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+      <item type="id" name="tab_search" />
+      <item type="id" name="tab_list" />
+      <item type="id" name="tab_news" />
+      <item type="id" name="tab_profile" />
+      <item type="id" name="content" />
+      <item type="id" name="tabbar" />
+</resources>

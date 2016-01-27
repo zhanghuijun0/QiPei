@@ -1,0 +1,61 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_activity_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_webbrowser_bottombar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_bottombar_height"
+        android:layout_alignParentBottom="true"
+        android:background="@color/common_bottombar_bg"
+        android:gravity="center_vertical" >
+
+        <ImageButton
+            android:id="@+id/ibtn_webbrowser_goback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:background="@android:color/transparent"
+            android:onClick="onBackClick"
+            android:src="@drawable/webbrowser_toolbar_back_selector" />
+
+        <ImageButton
+            android:id="@+id/ibtn_webbrowser_goforward"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp"
+            android:layout_toRightOf="@id/ibtn_webbrowser_goback"
+            android:background="@android:color/transparent"
+            android:onClick="onForwardClick"
+            android:src="@drawable/webbrowser_toolbar_forward_selector" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/common_bottombar_height"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:onClick="onHomeClick"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:scaleType="center"
+            android:src="@drawable/webbrowser_toolbar_home_selector"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <com.handmark.pulltorefresh.library.PullToRefreshWebView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/wv_webbrowser"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/rl_webbrowser_bottombar"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/transparent"
+        ptr:ptrMode="pullFromStart" />
+
+</RelativeLayout>

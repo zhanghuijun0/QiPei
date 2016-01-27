@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_activity_bg"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/profile_framelayout_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_actionbar_height"
+        android:background="@color/common_actionbar_bg" >
+
+        <TextView
+            android:id="@+id/profile_product_manage_list_text"
+            style="@style/Widget.ActionbarTextView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/profile_label_product_manage_list_text" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/companyinfo_lable_back_selector"
+            android:onClick="onProductManageListBackClick"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:src="@drawable/ic_back" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginRight="10dp"
+            android:clickable="true"
+            android:onClick="onAddProductClick"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_add_product"
+            android:visibility="visible" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/profile_product_manage_listview_framelayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/profile_framelayout_top"
+        android:background="@color/common_activity_bg" >
+
+        <com.handmark.pulltorefresh.library.PullToRefreshListView
+            android:id="@+id/profile_product_manage_list"
+            style="@style/Widget.PullToRefreshListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            
+            android:cacheColorHint="#00000000"
+            android:footerDividersEnabled="false"
+            android:headerDividersEnabled="false" />
+
+        <LinearLayout
+            android:id="@+id/profile_product_emptyview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_launcher" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="没有数据" />
+        </LinearLayout>
+    </FrameLayout>
+
+</RelativeLayout>

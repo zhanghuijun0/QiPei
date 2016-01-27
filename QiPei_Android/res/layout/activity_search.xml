@@ -1,0 +1,27 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_activity_bg"
+    android:orientation="vertical" >
+
+    <com.gammainfo.qipei.widget.SearchView
+        android:id="@+id/search_view_search"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_actionbar_height" />
+
+    <com.gammainfo.qipei.widget.SearchResultKeywordHistoryView
+        android:id="@+id/search_result_keyword_history"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.gammainfo.qipei.widget.SearchResultUserView
+        android:id="@+id/search_result_user"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.gammainfo.qipei.widget.SearchResultProductView
+        android:id="@+id/search_result_product"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

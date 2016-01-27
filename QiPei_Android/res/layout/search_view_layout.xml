@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/common_actionbar_height"
+    android:background="@color/common_actionbar_bg"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+    <CheckedTextView
+        android:id="@+id/tv_search_area"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:checkMark="@drawable/searchview_area_arrow_selector"
+        android:clickable="true"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="上海"
+        android:textColor="#FFFFFFFF"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:id="@+id/ll_search_view_cancelsearch_container"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="0dp"
+        android:padding="0dp" >
+
+        <Button
+            android:id="@+id/btn_search_view_cancelsearch"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="0dp"
+            android:background="#00000000"
+            android:padding="5dp"
+            android:text="@string/common_label_cancel"
+            android:textColor="#FFFFFFFF"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_margin="5dp"
+        android:layout_toLeftOf="@id/ll_search_view_cancelsearch_container"
+        android:layout_toRightOf="@id/tv_search_area"
+        android:background="@drawable/common_editortext_bg" >
+
+        <View
+            android:id="@+id/view_search_line"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dp"
+            android:layout_toRightOf="@+id/tv_search_type"
+            android:background="#FFC5C5C5" />
+
+        <FrameLayout
+            android:id="@+id/fl_search_speech_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" >
+
+            <ImageButton
+                android:id="@+id/ibtn_search_speech"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="#00000000"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/search_speech_selector" />
+
+            <ImageButton
+                android:id="@+id/ibtn_search_deltext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="#00000000"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/common_editor_del_selector"
+                android:visibility="invisible" />
+        </FrameLayout>
+
+        <EditText
+            android:id="@+id/et_search_keyword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/fl_search_speech_container"
+            android:layout_toRightOf="@id/view_search_line"
+            android:background="@null"
+            android:clickable="true"
+            android:focusable="false"
+            android:hint="@string/search_hint_keyword"
+            android:imeOptions="actionSearch"
+            android:paddingBottom="3dp"
+            android:paddingTop="3dp"
+            android:singleLine="true" />
+
+        <CheckedTextView
+            android:id="@+id/tv_search_type"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignBaseline="@+id/et_search_keyword"
+            android:layout_alignBottom="@+id/et_search_keyword"
+            android:layout_alignParentLeft="true"
+            android:checkMark="@drawable/searchview_search_type_arrow_selector"
+            android:clickable="true"
+            android:gravity="center"
+            android:paddingLeft="8dp"
+            android:paddingRight="3dp"
+            android:text="@string/search_label_manufacturer"
+            android:textColor="@color/common_main_textcolor"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+</RelativeLayout>

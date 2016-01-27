@@ -1,0 +1,76 @@
+<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="@android:style/Theme.NoTitleBar">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+    <style name="Widget.GammaScrollbar" parent="Widget">
+        <item name="android:scrollbarSize">3dp</item>
+        <item name="android:scrollbarThumbVertical">@drawable/common_scrollbar_thumb_vertical</item>
+        <item name="android:scrollbarTrackVertical">@drawable/common_scrollbar_track_vertical</item>
+        <item name="android:scrollbarStyle">outsideOverlay</item>
+        <item name="android:scrollbarThumbHorizontal">@drawable/common_scrollbar_thumb_vertical</item>
+        <item name="android:scrollbarTrackHorizontal">@drawable/common_scrollbar_track_vertical</item>
+    </style>
+
+    <style name="Widget.PullToRefreshListView" parent="Widget.GammaScrollbar">
+        <item name="android:divider">@color/common_gray_line_color</item>
+        <item name="android:dividerHeight">1px</item>
+        <item name="android:listSelector">@drawable/common_listitem_selector</item>
+    </style>
+
+    <style name="Widget.ActionbarTextView" parent="Widget">
+        <item name="android:background">#00000000</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">#FFFFFFFF</item>
+    </style>
+
+    <style name="Widget.BackView" parent="Widget">
+        <item name="android:background">@drawable/common_btn_back_selector</item>
+        <item name="android:src">@drawable/ic_back</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:clickable">true</item>
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:paddingRight">20dp</item>
+    </style>
+
+    <style name="NoTitleTransparentDialog" parent="@android:Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/common_transparent</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="AlertDialog" parent="@android:Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/common_transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="FullScreenDialog" parent="@android:Theme.Dialog">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/common_transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+</resources>

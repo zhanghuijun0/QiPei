@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:vpi="http://schemas.android.com/apk/lib/cn.amose.vpi"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFFFF"
+    android:baselineAligned="false"
+    android:orientation="vertical" > 
+    <RelativeLayout
+        android:id="@+id/supply_demand_banner"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:background="@color/common_banner_bg"
+        android:minHeight="@dimen/common_banner_height" >
+
+        <com.gammainfo.qipei.widget.UninterceptableViewPager
+            android:id="@+id/vp_supply_demand_pager"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true" />
+
+        <cn.amose.vpi.CirclePageIndicator
+            android:id="@+id/cpi_search_pager_indcator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:padding="10dip"
+            vpi:centered="false"
+            vpi:fillColor="#d3b28a"
+            vpi:pageColor="#745a46"
+            vpi:radius="3dp"
+            vpi:strokeColor="#00000000"
+            vpi:strokeWidth="1dp" />
+
+    </RelativeLayout>
+    
+    
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1dp"
+            android:orientation="vertical"
+            android:layout_margin="10dp"
+            android:background="@drawable/list_phone_item_bg_selector"
+            android:padding="5dp" >
+			  <TextView
+                android:id="@+id/supply_demand_listitem_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLength="20"
+                android:singleLine="true"
+                android:textColor="#FF2D2D2D"
+                android:textSize="17sp" />
+            <TextView
+                android:id="@+id/supply_demand_listitem_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minLines="3"
+                android:textColor="#FFBCBCBC" />
+            
+            <TextView
+                android:id="@+id/supply_demand_listitem_update_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textColor="#FF0B9E4C"
+                android:textSize="17sp" />
+        </LinearLayout>
+    	
+    
+    	<RelativeLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginBottom="1dp"
+	    android:layout_marginLeft="10dp"
+	    android:layout_marginRight="10dp"
+	    > 
+  		<TextView
+  		    android:id="@+id/companyinfo_textview_call"
+	        android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content"
+	    	android:background="@drawable/list_phone_item_bg_selector"
+	    	android:textColor="@color/common_actionbar_bg"
+	    	android:text="@string/list_listuser_lable_commpany_phone"
+	    	android:layout_alignParentRight="true"
+	    	android:clickable="true"
+	    	android:onClick="callToCompany"   	
+	    	android:gravity="center"
+	    	android:textSize="16sp"
+	    	android:padding="10dp"
+	    	android:drawablePadding="10dp"
+	        />
+	    <TextView
+	        android:id="@+id/supply_demand_show_phone"
+	        android:layout_width="match_parent"
+	    	android:layout_height="wrap_content"
+	    	android:background="@color/common_segement_bg"
+	    	android:layout_toLeftOf="@id/companyinfo_textview_call"
+	    	android:textSize="16sp"
+	    	android:padding="10dp"
+	    	android:drawableLeft="@drawable/list_item_bt_left_phone"
+	    	android:drawablePadding="10dp"
+	    	android:layout_marginRight="1dp"
+	        />
+    	
+    	</RelativeLayout>
+	        
+	   <RelativeLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginBottom="1dp"
+	    android:layout_marginLeft="10dp"
+	    android:layout_marginRight="10dp"
+	    >
+    	<TextView
+    	    android:id="@+id/companyinfo_textview_adress"
+	        android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content"
+	    	android:background="@drawable/list_phone_item_bg_selector"
+	    	android:textColor="@color/common_actionbar_bg"
+	    	android:layout_alignParentRight="true"
+	    	android:clickable="true"
+	    	android:onClick="openMap"
+	    	android:text="@string/list_listuser_lable_commpany_map"
+	    	android:gravity="center"
+	    	android:textSize="16sp"
+	    	android:padding="10dp"
+	    	android:drawablePadding="10dp"
+	        />
+    	
+    	 <TextView
+    	    android:id="@+id/supply_demand_show_adress"
+	        android:layout_width="match_parent"
+	    	android:layout_height="wrap_content"
+	    	android:background="@color/common_segement_bg"
+	    	android:layout_toLeftOf="@id/companyinfo_textview_adress"
+	    	android:singleLine="true"
+	    	android:ellipsize="start"
+	    	android:textSize="16sp"
+	    	android:padding="10dp"
+	    	android:drawableLeft="@drawable/companyinfo_textview_position"
+	    	android:drawablePadding="10dp"
+	    	android:layout_marginRight="1dp"
+	        />
+	</RelativeLayout>
+	
+	<TextView
+	    android:id="@+id/company_name"
+	    android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="@drawable/list_phone_item_bg_selector"
+		android:layout_margin="10dp"
+		android:textSize="16sp"
+	   	android:padding="10dp"
+	   	android:clickable="true"
+	   	android:onClick="toCompany"
+	   	android:drawableRight="@drawable/profile_login_small_arrows"
+	   	android:drawablePadding="10dp"
+	    />
+
+	<LinearLayout
+	    android:id="@+id/supply_demand_favorite_layout"
+	    android:layout_width="match_parent"
+	    android:layout_height="50dp"
+	    android:layout_margin="10dp"
+	    android:background="@drawable/profile_login_button_selecter"
+	    android:clickable="true"
+	    android:onClick="setFavotite"
+	    android:gravity="center"
+	    android:padding="10dp" >
+
+	    <Button
+	        android:id="@+id/supply_demand_favorite_button"
+		   	android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:background="#00000000"
+			android:drawableLeft="@drawable/list_item_bt_left_favorite_false_white"
+		   	android:textColor="@color/common_activity_bg"
+		   	android:clickable="false"
+		   	android:drawablePadding="5dp"
+		   	android:textSize="20sp"
+		   	android:text="@string/list_listuser_bt_favorite"
+	    />
+	    
+	</LinearLayout>
+	
+</LinearLayout>

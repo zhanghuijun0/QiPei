@@ -1,0 +1,67 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+        <Button
+            android:id="@+id/btn_popupwindow_search_type_manufacturer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/search_type_rectangle_bg_selector"
+            android:padding="10dp"
+            android:text="@string/popupwindow_search_type_manufacturer"
+            android:textColor="#FF000000" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#FFC5C5C5"
+            android:clickable="false" />
+
+        <Button
+            android:id="@+id/btn_popupwindow_search_type_agency"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/search_type_rectangle_bg_selector"
+            android:padding="10dp"
+            android:text="@string/popupwindow_search_type_agency"
+            android:textColor="#FF000000" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#FFC5C5C5"
+            android:clickable="false" />
+
+        <Button
+            android:id="@+id/btn_popupwindow_search_type_enduser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/search_type_rectangle_bg_selector"
+            android:padding="10dp"
+            android:text="@string/popupwindow_search_type_enduser"
+            android:textColor="#FF000000" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#FFC5C5C5"
+            android:clickable="false" />
+
+        <Button
+            android:id="@+id/btn_popupwindow_search_type_product"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/search_type_rectangle_bg_selector"
+            android:padding="10dp"
+            android:text="@string/popupwindow_search_type_product"
+            android:textColor="#FF000000" />
+    </LinearLayout>
+
+</LinearLayout>

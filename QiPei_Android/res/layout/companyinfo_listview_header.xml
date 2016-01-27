@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:layout_marginTop="7dp"
+        android:orientation="horizontal" >
+
+        <com.loopj.android.image.SmartImageView
+            android:id="@+id/siv_list_listitem_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@color/common_segement_bg"
+            android:scaleType="fitXY" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="1dp"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/siv_list_listitem_text_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@color/common_segement_bg"
+                android:padding="5dp" >
+
+                <TextView
+                    android:id="@+id/tv_list_listitem_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:maxLength="10"
+                    android:singleLine="true"
+                    android:textColor="#FF2D2D2D"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/tv_list_listitem_brief"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_list_listitem_title"
+                    android:lines="2"
+                    android:textColor="#FFBCBCBC" />
+				
+                 <TextView
+                android:id="@+id/tv_company_listitem_user_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_list_listitem_title"
+                android:layout_marginLeft="5dp"
+                android:singleLine="true"
+                android:textColor="#FF3d3d3d"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tv_company_split"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_list_listitem_title"
+                android:layout_toRightOf="@id/tv_company_listitem_user_type"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:singleLine="true"
+                android:text="/"
+                android:textColor="#FF999999"
+                android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_list_listitem_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/tv_list_listitem_brief"
+                    android:layout_toRightOf="@+id/tv_company_split"
+                    android:singleLine="true"
+                    android:text="@string/companyinfo_listuser_lable_iscertificated"
+                    android:textColor="#FF0B9E4C"
+                    />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2" >
+
+                <LinearLayout
+                    android:id="@+id/siv_company_listitem_button_share"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="1dp"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/list_phone_item_bg_selector"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="6dp" >
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#00000000"
+                        android:clickable="false"
+                        android:drawableLeft="@drawable/list_listuser_bt_share"
+                        android:drawablePadding="5dp"
+                        android:text="@string/list_listuser_bt_share" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/siv_company_listitem_button_favorite"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/list_phone_item_bg_selector"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="6dp" >
+
+                    <Button
+                        android:id="@+id/list_company_favorite_bt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#00000000"
+                        android:clickable="false"
+                        android:drawableLeft="@drawable/list_item_bt_left_favorite_true"
+                        android:drawablePadding="5dp"
+                        android:text="@string/list_listuser_bt_favorite" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:background="#E3E3E3" />
+
+    <TextView
+        android:id="@+id/company_bt_showorhide_intro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:clickable="true"
+        android:drawableRight="@drawable/companyinfo_textview_intro_hide"
+        android:onClick="showOrHide"
+        android:paddingBottom="5dp"
+        android:paddingTop="12dp"
+        android:text="@string/list_listuser_lable_commpany_intro"
+        android:textColor="#ff000000"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:background="#C9C9C9" >
+    </View>
+
+    <TextView
+        android:id="@+id/companyinfo_textview_intro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:visibility="gone"
+        android:textColor="#FFBCBCBC" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp" >
+
+        <TextView
+            android:id="@+id/companyinfo_textview_call"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/list_phone_item_bg_selector"
+            android:clickable="true"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:onClick="callToCompany"
+            android:padding="10dp"
+            android:text="@string/list_listuser_lable_commpany_phone"
+            android:textColor="@color/common_actionbar_bg"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/companyinfo_show_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="1dp"
+            android:layout_toLeftOf="@id/companyinfo_textview_call"
+            android:background="@color/common_segement_bg"
+            android:drawableLeft="@drawable/list_item_bt_left_phone"
+            android:drawablePadding="10dp"
+            android:padding="10dp"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp" >
+
+        <TextView
+            android:id="@+id/companyinfo_textview_adress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/list_phone_item_bg_selector"
+            android:clickable="true"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:onClick="openMap"
+            android:padding="10dp"
+            android:text="@string/list_listuser_lable_commpany_map"
+            android:textColor="@color/common_actionbar_bg"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/companyinfo_show_adress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="1dp"
+            android:layout_toLeftOf="@id/companyinfo_textview_adress"
+            android:background="@color/common_segement_bg"
+            android:drawableLeft="@drawable/companyinfo_textview_position"
+            android:drawablePadding="10dp"
+            android:ellipsize="start"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_marginBottom="1dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:background="#CCCCCC" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:paddingBottom="5dp"
+        android:paddingTop="12dp"
+        android:text="@string/list_listuser_lable_commpany_product"
+        android:textColor="#ff000000"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:background="#CCCCCC" />
+    <TextView
+        android:id="@+id/product_no_list"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:text="@string/list_no_product_list"
+        android:gravity="center"
+        ></TextView>
+
+</LinearLayout>
